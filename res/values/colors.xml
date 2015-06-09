@@ -3,4 +3,6 @@
     <color name="sweep_start_color">#60FF4500</color>
     <color name="sweep_end_color">#ffd700</color>
     <color name="sweep_circle_color">#00FF00</color>
+    
+    <color name="black">#000000</color>
 </resources>

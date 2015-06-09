@@ -4,5 +4,9 @@
     <string name="app_name">CustomUI</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+	<!-- callback_status_view_type -->
+	    <string name="callback_status_view_type_checkbox">checkbox</string>
+	    <string name="callback_status_view_type_progressbar">progressbar</string>
+	    <string name="callback_status_view_type_checkedtext">checkedtext</string>
+	    <string name="callback_status_view_type_text">text</string>
 </resources>

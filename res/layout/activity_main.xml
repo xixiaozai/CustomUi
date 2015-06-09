@@ -1,25 +1,35 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
+    android:background="#ffffff"
+    android:orientation="vertical">
 
-    <com.minisea.customui.view.RadarView
-        android:id="@+id/radar" 
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_centerInParent="true"
-        android:visibility="invisible"/>
-    
     <Button
-        android:id="@+id/btn" 
-        android:layout_width="wrap_content"
+        android:id="@+id/radar_btn" 
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:text="start"
-        android:textSize="16sp"
+        android:text="显示雷达效果"
+        android:textSize="12sp"
         />
-
-</RelativeLayout>
+    
+	<Button
+        android:id="@+id/combinaional_status_btn" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="显示自定义组合状态控件"
+        android:textSize="12sp"
+        />
+	
+	<Button
+        android:id="@+id/wcrs_progressbar_btn" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Windows拷贝文件效果进度条"
+        android:textSize="12sp"
+        />
+    
+</LinearLayout>
