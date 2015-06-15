@@ -11,16 +11,13 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.SweepGradient;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 
 /**
- * 
  * @author haihai.zhang@stark-corp.com
  * 
  **/
 public class RadarView extends View {
-
 	private int degree;
 	private Paint circlePaint;
 	private Paint linePaint;
