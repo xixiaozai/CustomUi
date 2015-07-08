@@ -1,5 +1,6 @@
 package com.minisea.customui;
 
+import com.minisea.customui.view.MovingProgressBar;
 import com.minisea.customui.view.WindowsCopyResStyleProgress;
 
 import android.app.Activity;
@@ -15,11 +16,12 @@ public class WindowsCopyResStyleProgressActivity extends Activity{
 
 	private WindowsCopyResStyleProgress mProgressBar;  
     private static final int MSG_PROGRESS_UPDATE = 0x110;  
-  
+    private MovingProgressBar movingProgressBar;
     private Handler mHandler = new Handler() {  
         public void handleMessage(android.os.Message msg) {  
             int progress = mProgressBar.getProgress();  
-            mProgressBar.setProgress(++progress);  
+            mProgressBar.setProgress(++progress); 
+            movingProgressBar.setProgress(progress);
             if (progress >= 100) {  
                 mHandler.removeMessages(MSG_PROGRESS_UPDATE);  
                   
@@ -33,6 +35,7 @@ public class WindowsCopyResStyleProgressActivity extends Activity{
         super.onCreate(savedInstanceState);  
         setContentView(R.layout.activity_wcrs_progressbar);  
         mProgressBar = (WindowsCopyResStyleProgress) findViewById(R.id.progressbar);  
+        movingProgressBar = (MovingProgressBar) findViewById(R.id.moving_progress_bar);
         mHandler.sendEmptyMessage(MSG_PROGRESS_UPDATE);  
   
     }  

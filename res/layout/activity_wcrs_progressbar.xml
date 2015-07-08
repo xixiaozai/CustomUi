@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:myattr="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff">
@@ -10,5 +11,13 @@
         android:layout_height="wrap_content"
         style="?android:attr/progressBarStyleHorizontal"
         />
-
+    
+	<com.minisea.customui.view.MovingProgressBar 
+	    android:id="@+id/moving_progress_bar"
+	    android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:progress="20"
+        myattr:movingProgressColor="@color/backup_prog"
+        myattr:secondProg="@drawable/backup_prog"
+	    android:layout_below="@id/progressbar"/>
 </RelativeLayout>

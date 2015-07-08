@@ -31,5 +31,12 @@
         android:text="Windows拷贝文件效果进度条"
         android:textSize="12sp"
         />
+	
+	<Button 
+	    android:id="@+id/water_wave_progress"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="水波纹进度"
+	    ></Button>"
     
 </LinearLayout>

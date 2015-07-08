@@ -5,4 +5,5 @@
     <color name="sweep_circle_color">#00FF00</color>
     
     <color name="black">#000000</color>
+    <color name="backup_prog">#d3edff</color>
 </resources>
