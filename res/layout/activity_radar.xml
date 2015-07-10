@@ -1,25 +1,33 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:myattr="http://schemas.android.com/apk/res-auto"
+    xmlns:image_radar_view="http://schemas.android.com/apk/res/com.minisea.customui"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
+    android:background="#ffffff" >
 
-    <com.minisea.customui.view.RadarView
-        android:id="@+id/radar" 
+    <com.minisea.customui.view.ImageRadarView android:id="@+id/image_radar"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_centerInParent="true"
-        android:visibility="invisible"/>
-    
+        android:visibility="invisible"
+        image_radar_view:radar_back_src="@drawable/radar_back"
+        image_radar_view:radar_border_src="@drawable/radar_border"
+        image_radar_view:radar_circle_expand_reverse_speed="25"
+        image_radar_view:radar_end_color_id="@color/sweep_end_color"
+        image_radar_view:radar_start_color_id="@color/sweep_start_color"
+        image_radar_view:radar_sweeep_degree="5"
+        image_radar_view:radar_sweep_radius_margin="15"
+        image_radar_view:radar_top_icon_src="@drawable/cloud" />
+
     <Button
-        android:id="@+id/btn" 
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:text="start"
-        android:textSize="16sp"
-        />
+        android:textSize="16sp" />
 
 </RelativeLayout>

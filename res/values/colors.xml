@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-    <color name="sweep_start_color">#60FF4500</color>
-    <color name="sweep_end_color">#ffd700</color>
+    <color name="sweep_start_color">#00FFFFFF</color>
+    <color name="sweep_end_color">#AAFFFFFF</color>
     <color name="sweep_circle_color">#00FF00</color>
     
     <color name="black">#000000</color>

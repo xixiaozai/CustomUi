@@ -1,5 +1,6 @@
 package com.minisea.customui;
 
+import com.minisea.customui.view.ImageRadarView;
 import com.minisea.customui.view.RadarView;
 
 import android.app.Activity;
@@ -16,7 +17,7 @@ import android.widget.Button;
  **/
 public class RadarActivity extends Activity{
 
-	private RadarView radarView;  
+	private ImageRadarView radarView;  
     private Button btn;  
     private Thread radarSweepThread;  
   
@@ -27,7 +28,7 @@ public class RadarActivity extends Activity{
         super.onCreate(savedInstanceState);  
         setContentView(R.layout.activity_radar);  
   
-        radarView = (RadarView) findViewById(R.id.radar);  
+        radarView = (ImageRadarView) findViewById(R.id.image_radar);  
         btn = (Button) findViewById(R.id.btn);  
         btn.setOnClickListener(new View.OnClickListener() {  
   

@@ -53,4 +53,16 @@
 	<declare-styleable name="Themes">
 		<attr name="waveViewStyle" format="reference"/>
 	</declare-styleable>
+	
+	 <declare-styleable name="image_radar_view">
+        <attr name="radar_sweeep_degree" format="integer" />
+        <attr name="radar_start_color_id" format="color" />
+        <attr name="radar_end_color_id" format="color" />
+        <attr name="radar_sweep_radius_margin" format="integer" />
+        <attr name="radar_circle_expand_reverse_speed" format="integer" />
+        <attr name="radar_top_icon_src" format="reference" />
+        <attr name="radar_border_src" format="reference" />
+        <attr name="radar_back_src" format="reference" />
+    </declare-styleable>
+    
 </resources>

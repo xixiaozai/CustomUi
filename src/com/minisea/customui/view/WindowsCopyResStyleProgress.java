@@ -64,7 +64,7 @@ public class WindowsCopyResStyleProgress extends ProgressBar{
 		//canvas.drawBitmap(, l, t, new Paint());
 		canvas.drawBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.backup_prog), null, new Rect(l, t, r, b), new Paint());
 		//canvas.drawRect(new Rect(l, t, r, b), mPaint);
-		canvas.restore();  
+		canvas.restore();
 	}
 
 }
