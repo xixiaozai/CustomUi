@@ -26,6 +26,7 @@
         <activity android:name=".RadarActivity"></activity>
         <activity android:name=".CombinationlStatusActivity"></activity>
         <activity android:name=".WindowsCopyResStyleProgressActivity"></activity>
+        <activity android:name=".WaterProgressActivity"></activity>
     </application>
 
 </manifest>
