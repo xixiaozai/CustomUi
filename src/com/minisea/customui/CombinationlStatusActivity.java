@@ -1,5 +1,7 @@
 package com.minisea.customui;
 
+import com.minisea.customui.R;
+
 import android.app.Activity;
 import android.os.Bundle;
 

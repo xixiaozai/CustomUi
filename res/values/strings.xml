@@ -4,9 +4,13 @@
     <string name="app_name">CustomUI</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-	<!-- callback_status_view_type -->
-	    <string name="callback_status_view_type_checkbox">checkbox</string>
-	    <string name="callback_status_view_type_progressbar">progressbar</string>
-	    <string name="callback_status_view_type_checkedtext">checkedtext</string>
-	    <string name="callback_status_view_type_text">text</string>
+    <!-- callback_status_view_type -->
+    <string name="callback_status_view_type_checkbox">checkbox</string>
+    <string name="callback_status_view_type_progressbar">progressbar</string>
+    <string name="callback_status_view_type_checkedtext">checkedtext</string>
+    <string name="callback_status_view_type_text">text</string>
+    <string name="title_activity_rotating">RotatingActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
 </resources>

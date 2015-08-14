@@ -1,6 +1,8 @@
 package com.minisea.customui;
 
 import com.minisea.customui.R;
+import com.minisea.customui.ui.RadarActivity;
+import com.minisea.customui.ui.WindowsCopyResStyleProgressActivity;
 import com.minisea.customui.view.RadarView;
 
 import android.app.Activity;
@@ -19,6 +21,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private Button combinationalStatusBtn;  
     private Button wcrsProgressbarBtn;
     private Button waterWaveProgressBtn;
+    private Button imageRotateBtn;
     @Override  
     protected void onCreate(Bundle savedInstanceState) {  
         super.onCreate(savedInstanceState);  
@@ -34,6 +37,10 @@ public class MainActivity extends Activity implements OnClickListener {
         
         waterWaveProgressBtn = (Button) findViewById(R.id.water_wave_progress);
         waterWaveProgressBtn.setOnClickListener(this);
+        
+        imageRotateBtn = (Button) findViewById(R.id.rotating);
+        imageRotateBtn.setOnClickListener(this);
+        
     }
 
 	@Override
@@ -52,7 +59,11 @@ public class MainActivity extends Activity implements OnClickListener {
 			Intent intent3 = new Intent(MainActivity.this, WaterProgressActivity.class);
 			MainActivity.this.startActivity(intent3);
 			break;
-			default : Toast.makeText(MainActivity.this, "没有选择任何效果", Toast.LENGTH_SHORT).show();
+		case R.id.rotating: 
+			Intent intent4 = new Intent(MainActivity.this, RotatingActivity.class);
+			MainActivity.this.startActivity(intent4);
+			break;
+		default : Toast.makeText(MainActivity.this, "没有选择任何效果", Toast.LENGTH_SHORT).show();
 		}
 		
 	}  

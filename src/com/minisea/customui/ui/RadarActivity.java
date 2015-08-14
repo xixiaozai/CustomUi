@@ -1,5 +1,6 @@
-package com.minisea.customui;
+package com.minisea.customui.ui;
 
+import com.minisea.customui.R;
 import com.minisea.customui.view.ImageRadarView;
 import com.minisea.customui.view.RadarView;
 

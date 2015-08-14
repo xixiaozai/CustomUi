@@ -1,4 +1,4 @@
-package com.minisea.customui;
+package com.minisea.customui.ui;
 
 import android.app.Activity;
 import android.os.Bundle;

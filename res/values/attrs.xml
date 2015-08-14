@@ -24,37 +24,34 @@
     <declare-styleable name="RoundProgressBarWidthNumber">
         <attr name="radius" format="dimension" />
     </declare-styleable>
-
     <declare-styleable name="MovingProgressBar">
         <attr name="movingProgressColor" format="color" />
         <attr name="secondProg" format="reference" />
     </declare-styleable>
     <declare-styleable name="WaveView">
-		<attr name="above_wave_color" format="color"/>
-		<attr name="blow_wave_color" format="color"/>
-		<attr name="progress_size" format="integer" />
+        <attr name="above_wave_color" format="color" />
+        <attr name="blow_wave_color" format="color" />
+        <attr name="progress_size" format="integer" />
         <attr name="wave_length" format="enum">
-            <enum name="large" value="1"/>
-            <enum name="middle" value="2"/>
-            <enum name="little" value="3"/>
+            <enum name="large" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="little" value="3" />
         </attr>
         <attr name="wave_height" format="enum">
-            <enum name="large" value="1"/>
-            <enum name="middle" value="2"/>
-            <enum name="little" value="3"/>
+            <enum name="large" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="little" value="3" />
         </attr>
         <attr name="wave_hz" format="enum">
-            <enum name="fast" value="1"/>
-            <enum name="normal" value="2"/>
-            <enum name="slow" value="3"/>
+            <enum name="fast" value="1" />
+            <enum name="normal" value="2" />
+            <enum name="slow" value="3" />
         </attr>
-	</declare-styleable>
-
-	<declare-styleable name="Themes">
-		<attr name="waveViewStyle" format="reference"/>
-	</declare-styleable>
-	
-	 <declare-styleable name="image_radar_view">
+    </declare-styleable>
+    <declare-styleable name="Themes">
+        <attr name="waveViewStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="image_radar_view">
         <attr name="radar_sweeep_degree" format="integer" />
         <attr name="radar_start_color_id" format="color" />
         <attr name="radar_end_color_id" format="color" />
@@ -64,5 +61,13 @@
         <attr name="radar_border_src" format="reference" />
         <attr name="radar_back_src" format="reference" />
     </declare-styleable>
-    
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+	<declare-styleable name="points_p_bar">
+        <attr name="point_count" format="integer" />
+        <attr name="selected_src" format="reference"/>
+        <attr name="unselected_src" format="reference"/>
+    </declare-styleable>
 </resources>

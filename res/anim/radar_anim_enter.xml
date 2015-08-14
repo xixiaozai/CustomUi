@@ -5,12 +5,23 @@
    
     <scale
         android:duration="2000"
-        android:fromXScale="1.5"
-        android:fromYScale="1.5"
-        android:interpolator="@android:anim/decelerate_interpolator"
+        android:fromXScale="1.2"
+        android:fromYScale="1.2"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
         android:pivotX="50%"
         android:pivotY="50%"
         android:toXScale="1.0"
         android:toYScale="1.0" />
 
+    <translate android:duration="1000"
+	    android:fromYDelta="50%"
+        android:toYDelta="0%"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        />
+	
+	<alpha android:duration="1000"
+	    android:fromAlpha="0.0"
+	    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+	    android:toAlpha="1.0"
+	    />
 </set>
