@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.minisea.customui"
+    package="com.minisea.cookbook"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -25,24 +25,30 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.minisea.customui.MainActivity"
-            android:label="@string/app_name" >
+            android:name="com.minisea.customui.ui.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.minisea.customui.RadarActivity" >
+        <activity android:name="com.minisea.customui.ui.RadarActivity" 
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.minisea.customui.CombinationlStatusActivity" >
+        <activity android:name="com.minisea.customui.ui.CombinationlStatusActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.minisea.customui.WindowsCopyResStyleProgressActivity" >
+        <activity android:name="com.minisea.customui.ui.WindowsCopyResStyleProgressActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.minisea.customui.WaterProgressActivity" >
+        <activity android:name="com.minisea.customui.ui.WaterProgressActivity"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.minisea.customui.RotatingActivity"
+            android:name="com.minisea.customui.ui.RotatingActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_rotating"
             android:theme="@style/FullscreenTheme" >

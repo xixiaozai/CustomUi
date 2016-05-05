@@ -2,7 +2,7 @@ package com.minisea.customui.view;
 
 import java.util.Random;
 
-import com.minisea.customui.R;
+import com.minisea.cookbook.R;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -37,22 +37,22 @@ public class RadarView extends View {
 	/**
 	 * @param
 	 * @return void
-	 * @Description //åˆå§‹åŒ–å®šä¹‰çš„ç”»ç¬”
+	 * @Description //³õÊ¼»¯¶¨ÒåµÄ»­±Ê
 	 */
 	private void initPaint() {
 		Resources r = this.getResources();
 		random =  new Random();
-		circlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);// åœ†å½¢ç”»ç¬”ï¼Œè®¾ç½®Paintä¸ºæŠ—é”¯é½¿
-		circlePaint.setARGB(255, 255, 255, 180);// è®¾ç½®é€æ˜Žåº¦å’ŒRGBé¢œè‰²
-		circlePaint.setStrokeWidth(3);// è½®å»“å®½åº¦
+		circlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);// Ô²ÐÎ»­±Ê£¬ÉèÖÃPaintÎª¿¹¾â³Ý
+		circlePaint.setARGB(255, 255, 255, 180);// ÉèÖÃÍ¸Ã÷¶ÈºÍRGBÑÕÉ«
+		circlePaint.setStrokeWidth(3);// ÂÖÀª¿í¶È
 		circlePaint.setStyle(Paint.Style.STROKE);
 
-		linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);// çº¿æ€§ç”»ç¬”
+		linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);// ÏßÐÔ»­±Ê
 		linePaint.setStrokeCap(Paint.Cap.ROUND);
 		linePaint.setARGB(255, 50, 57, 74);
 		linePaint.setStrokeWidth(2);
 
-		sweepPaint = new Paint(Paint.ANTI_ALIAS_FLAG);// é›·è¾¾Shaderç”»ç¬”
+		sweepPaint = new Paint(Paint.ANTI_ALIAS_FLAG);// À×´ïShader»­±Ê
 		sweepPaint.setStrokeCap(Paint.Cap.ROUND);
 		sweepPaint.setStrokeWidth(4);
 		sweepGradient = new SweepGradient(0, 0,
@@ -68,33 +68,33 @@ public class RadarView extends View {
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
-		// è®¡ç®—æŽ§ä»¶ä¸­å¿ƒä½ç½®
+		// ¼ÆËã¿Ø¼þÖÐÐÄÎ»ÖÃ
 		int width = getMeasuredWidth();
 		int height = getMeasuredHeight();
 		int cx = width / 2;
 		int cy = height / 2;
 		
-		// è®¾ç½®åŠå¾„
+		// ÉèÖÃ°ë¾¶
 		int radius = (cx > cy) ? cy : cx;
 		radius -= 10;
 		canvas.save();
 
-		// è®¾ç½®æ‰«æå¢žé‡
+		// ÉèÖÃÉ¨ÃèÔöÁ¿
 		degree += 5;
-		// è®¾ç½®è½¬åŠ¨åŽŸç‚¹
+		// ÉèÖÃ×ª¶¯Ô­µã
 		canvas.translate(cx, cy);
-		// æ—‹è½¬
+		// Ðý×ª
 		canvas.rotate(270 + degree);
-		// ç»˜åˆ¶æ‰«æåŒºåŸŸ
+		// »æÖÆÉ¨ÃèÇøÓò
 		canvas.drawCircle(0, 0, radius, sweepPaint);
 
-		// æ¢å¤Canvasyåæ ‡ï¼ˆ0,0ï¼‰
+		// »Ö¸´Canvasy×ø±ê£¨0,0£©
 		canvas.restore();
 		
-		// ç»˜åˆ¶ä¸‰ä¸ªåµŒå¥—åŒå¿ƒåœ†å½¢ï¼Œé€‚åº”circlePaintç”»ç¬”
+		// »æÖÆÈý¸öÇ¶Ì×Í¬ÐÄÔ²ÐÎ£¬ÊÊÓ¦circlePaint»­±Ê
 		canvas.drawCircle(cx, cy, radius, circlePaint);
-		circlePaint.setAlpha(100);// é™ä½Žå†…éƒ¨åœ†å½¢çš„é€æ˜Žåº¦
-		circlePaint.setStrokeWidth(2);// è®¾ç½®è½®å»“å®½åº¦
+		circlePaint.setAlpha(100);// ½µµÍÄÚ²¿Ô²ÐÎµÄÍ¸Ã÷¶È
+		circlePaint.setStrokeWidth(2);// ÉèÖÃÂÖÀª¿í¶È
 		canvas.drawCircle(cx, cy, radius * 2 / 3, circlePaint);
 		canvas.drawCircle(cx, cy, radius / 3, circlePaint);
 
@@ -125,7 +125,7 @@ public class RadarView extends View {
 
 		canvas.drawCircle(cx + x, y, 5, foundPoitPaint);
 		
-		float interval = radius / 12f;// åˆ»åº¦é—´è·
+		float interval = radius / 12f;// ¿Ì¶È¼ä¾à
 		float minLength = interval / 2;
 		float maxLength = interval;
 
@@ -161,8 +161,8 @@ public class RadarView extends View {
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 		int width = MeasureSpec.getSize(widthMeasureSpec);
 		int height = MeasureSpec.getSize(heightMeasureSpec);
-		int d = (width >= height) ? height : width; // èŽ·å–æœ€çŸ­çš„è¾¹ä½œä¸ºç›´å¾„
-		setMeasuredDimension(d, d); // é‡å†™æµ‹é‡æ–¹æ³•ï¼Œä¿è¯èŽ·å¾—çš„ç”»å¸ƒæ˜¯æ­£æ–¹å½¢
+		int d = (width >= height) ? height : width; // »ñÈ¡×î¶ÌµÄ±ß×÷ÎªÖ±¾¶
+		setMeasuredDimension(d, d); // ÖØÐ´²âÁ¿·½·¨£¬±£Ö¤»ñµÃµÄ»­²¼ÊÇÕý·½ÐÎ
 	}
 
 }

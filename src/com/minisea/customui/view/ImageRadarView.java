@@ -1,6 +1,6 @@
 package com.minisea.customui.view;
 
-import com.minisea.customui.R;
+import com.minisea.cookbook.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -43,7 +43,7 @@ public class ImageRadarView extends View {
 	private int circleExpandReverseSpeed;
 
 	/**
-	 * è®¾ç½®åœ†å½¢æ‰©æ•£é€Ÿåº¦ï¼Œæ‰©å±•é€Ÿåº¦ä¸æŒ‡å®šå€¼ç›¸å
+	 * ÉèÖÃÔ²ĞÎÀ©É¢ËÙ¶È£¬À©Õ¹ËÙ¶ÈÓëÖ¸¶¨ÖµÏà·´
 	 * 
 	 * @param circleExpandReverseSpeed
 	 */
@@ -52,7 +52,7 @@ public class ImageRadarView extends View {
 	}
 
 	/**
-	 * è®¾ç½®æ‰«æè¾¹è·
+	 * ÉèÖÃÉ¨Ãè±ß¾à
 	 * 
 	 * @param sweepRadiusMargin
 	 */
@@ -61,7 +61,7 @@ public class ImageRadarView extends View {
 	}
 
 	/**
-	 * è®¾ç½®æ‰«æé€Ÿåº¦
+	 * ÉèÖÃÉ¨ÃèËÙ¶È
 	 * 
 	 * @param sweeepDegree
 	 */
@@ -70,7 +70,7 @@ public class ImageRadarView extends View {
 	}
 
 	/**
-	 * è®¾ç½®è¡¨ç›˜å›¾ç‰‡
+	 * ÉèÖÃ±íÅÌÍ¼Æ¬
 	 * 
 	 * @param back
 	 */
@@ -79,7 +79,7 @@ public class ImageRadarView extends View {
 	}
 
 	/**
-	 * è®¾ç½®è¡¨ç›˜æ ‡å¿—
+	 * ÉèÖÃ±íÅÌ±êÖ¾
 	 * 
 	 * @param top
 	 */
@@ -88,7 +88,7 @@ public class ImageRadarView extends View {
 	}
 
 	/**
-	 * è®¾ç½®è¡¨ç›˜è¾¹æ¡†å›¾
+	 * ÉèÖÃ±íÅÌ±ß¿òÍ¼
 	 * 
 	 * @param radar_border
 	 */
@@ -97,7 +97,7 @@ public class ImageRadarView extends View {
 	}
 
 	/**
-	 * è®¾ç½®æ‰«ææ¸å˜é¢œè‰²
+	 * ÉèÖÃÉ¨Ãè½¥±äÑÕÉ«
 	 * 
 	 * @param startColorID
 	 * @param endColorID
@@ -117,7 +117,7 @@ public class ImageRadarView extends View {
 		TypedArray typeArray = context.obtainStyledAttributes(att,
 				R.styleable.image_radar_view);
 
-		// è·å–å‚æ•°
+		// »ñÈ¡²ÎÊı
 		startColorID = typeArray.getColor(
 				R.styleable.image_radar_view_radar_start_color_id,
 				R.color.sweep_start_color);
@@ -132,7 +132,7 @@ public class ImageRadarView extends View {
 				R.styleable.image_radar_view_radar_circle_expand_reverse_speed,
 				25);
 
-		// è·å–èµ„æº
+		// »ñÈ¡×ÊÔ´
 		Drawable backDrawable = typeArray
 				.getDrawable(R.styleable.image_radar_view_radar_back_src);
 		backDrawable = backDrawable == null ? getResources().getDrawable(
@@ -158,20 +158,20 @@ public class ImageRadarView extends View {
 	/**
 	 * @param
 	 * @return void
-	 * @Description //åˆå§‹åŒ–å®šä¹‰çš„ç”»ç¬”
+	 * @Description //³õÊ¼»¯¶¨ÒåµÄ»­±Ê
 	 */
 	private void initPaint() {
-		circlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);// åœ†å½¢ç”»ç¬”ï¼Œè®¾ç½®Paintä¸ºæŠ—é”¯é½¿
-		circlePaint.setARGB(255, 255, 255, 90);// è®¾ç½®é€æ˜åº¦å’ŒRGBé¢œè‰²
-		circlePaint.setStrokeWidth(3);// è½®å»“å®½åº¦
+		circlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);// Ô²ĞÎ»­±Ê£¬ÉèÖÃPaintÎª¿¹¾â³İ
+		circlePaint.setARGB(255, 255, 255, 90);// ÉèÖÃÍ¸Ã÷¶ÈºÍRGBÑÕÉ«
+		circlePaint.setStrokeWidth(3);// ÂÖÀª¿í¶È
 		circlePaint.setStyle(Paint.Style.STROKE);
 
-		linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);// çº¿æ€§ç”»ç¬”
+		linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);// ÏßĞÔ»­±Ê
 		linePaint.setStrokeCap(Paint.Cap.ROUND);
 		linePaint.setARGB(255, 50, 57, 74);
 		linePaint.setStrokeWidth(2);
 
-		sweepPaint = new Paint(Paint.ANTI_ALIAS_FLAG);// é›·è¾¾Shaderç”»ç¬”
+		sweepPaint = new Paint(Paint.ANTI_ALIAS_FLAG);// À×´ïShader»­±Ê
 		sweepPaint.setStrokeCap(Paint.Cap.ROUND);
 		sweepPaint.setStrokeWidth(4);
 		sweepGradient = new SweepGradient(0, 0, startColorID, endColorID);
@@ -185,31 +185,31 @@ public class ImageRadarView extends View {
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
-		// è®¡ç®—æ§ä»¶ä¸­å¿ƒä½ç½®
+		// ¼ÆËã¿Ø¼şÖĞĞÄÎ»ÖÃ
 		int width = getMeasuredWidth();
 		int height = getMeasuredHeight();
 		int cx = width / 2;
 		int cy = height / 2;
 
-		// è®¾ç½®åŠå¾„
+		// ÉèÖÃ°ë¾¶
 		int radius = radar_back_src.getWidth() / 2;
 		radius -= sweepRadiusMargin;
 		canvas.save();
 
-		// è®¾ç½®æ‰«æå¢é‡
+		// ÉèÖÃÉ¨ÃèÔöÁ¿
 		degree += sweeepDegree;
 		canvas.drawBitmap(radar_back_src, cx - radar_back_src.getWidth() / 2,
 				cy - radar_back_src.getHeight() / 2, null);
 		canvas.drawBitmap(radar_border_src, cx - radar_border_src.getWidth()
 				/ 2, cy - radar_border_src.getHeight() / 2, null);
-		// è®¾ç½®è½¬åŠ¨åŸç‚¹
+		// ÉèÖÃ×ª¶¯Ô­µã
 		canvas.translate(cx, cy);
-		// æ—‹è½¬
+		// Ğı×ª
 		canvas.rotate(270 + degree);
-		// ç»˜åˆ¶æ‰«æåŒºåŸŸ
+		// »æÖÆÉ¨ÃèÇøÓò
 		canvas.drawCircle(0, 0, radius, sweepPaint);
 
-		// æ¢å¤Canvasyåæ ‡ï¼ˆ0,0ï¼‰
+		// »Ö¸´Canvasy×ø±ê£¨0,0£©
 		canvas.restore();
 
 		canvas.drawCircle(
@@ -223,8 +223,8 @@ public class ImageRadarView extends View {
 		canvas.drawBitmap(radar_top_src, cx - radar_top_src.getWidth() / 2, cx
 				- radar_top_src.getHeight() / 2, null);
 		
-		circlePaint.setAlpha(100);// é™ä½å†…éƒ¨åœ†å½¢çš„é€æ˜åº¦
-		circlePaint.setStrokeWidth(2);// è®¾ç½®è½®å»“å®½åº¦
+		circlePaint.setAlpha(100);// ½µµÍÄÚ²¿Ô²ĞÎµÄÍ¸Ã÷¶È
+		circlePaint.setStrokeWidth(2);// ÉèÖÃÂÖÀª¿í¶È
 
 		canvas.save();//
 	}
@@ -232,31 +232,31 @@ public class ImageRadarView extends View {
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-		//æ ¹æ®å›¾ç‰‡å¤§å°è®¾ç½®æ§ä»¶å¤§å°
+		//¸ù¾İÍ¼Æ¬´óĞ¡ÉèÖÃ¿Ø¼ş´óĞ¡
 		int d = radar_border_src.getWidth() > radar_border_src.getHeight() ? radar_border_src.getWidth():  radar_border_src.getHeight();
-		setMeasuredDimension(d, d); // é‡å†™æµ‹é‡æ–¹æ³•ï¼Œä¿è¯è·å¾—çš„ç”»å¸ƒæ˜¯æ­£æ–¹å½¢
+		setMeasuredDimension(d, d); // ÖØĞ´²âÁ¿·½·¨£¬±£Ö¤»ñµÃµÄ»­²¼ÊÇÕı·½ĞÎ
 	}
 
 	public void startScan() {
-		this.setVisibility(View.VISIBLE);// è®¾ç½®å¯è§
+		this.setVisibility(View.VISIBLE);// ÉèÖÃ¿É¼û
 		Animation radarAnimEnter = AnimationUtils.loadAnimation(getContext(),
-				R.anim.radar_anim_enter);// åˆå§‹åŒ–radarViewè¿›å…¥åŠ¨ç”»
-		this.startAnimation(radarAnimEnter);// å¼€å§‹è¿›å…¥åŠ¨ç”»
-		radarSweepThread = new Thread(new RadarSweep());// é›·è¾¾æ‰«æçº¿ç¨‹
+				R.anim.radar_anim_enter);// ³õÊ¼»¯radarView½øÈë¶¯»­
+		this.startAnimation(radarAnimEnter);// ¿ªÊ¼½øÈë¶¯»­
+		radarSweepThread = new Thread(new RadarSweep());// À×´ïÉ¨ÃèÏß³Ì
 		radarSweepThread.start();
 	}
 
 	public void stopScan() {
 		Animation radarAnimEnter = AnimationUtils.loadAnimation(getContext(),
-				R.anim.radar_anim_exit);// åˆå§‹åŒ–radarViewé€€å‡ºåŠ¨ç”»
-		this.startAnimation(radarAnimEnter);// å¼€å§‹è¿›å…¥åŠ¨ç”»
-		this.setVisibility(View.INVISIBLE);// è®¾ç½®ä¸å¯è§
-		radarSweepThread.interrupt();// åœæ­¢æ‰«ææ›´æ–°
+				R.anim.radar_anim_exit);// ³õÊ¼»¯radarViewÍË³ö¶¯»­
+		this.startAnimation(radarAnimEnter);// ¿ªÊ¼½øÈë¶¯»­
+		this.setVisibility(View.INVISIBLE);// ÉèÖÃ²»¿É¼û
+		radarSweepThread.interrupt();// Í£Ö¹É¨Ãè¸üĞÂ
 	}
 
 	/**
 	 * @ClassName RadarSweep
-	 * @Description é›·è¾¾æ‰«æåŠ¨ç”»åˆ·æ–°çº¿ç¨‹ç±»
+	 * @Description À×´ïÉ¨Ãè¶¯»­Ë¢ĞÂÏß³ÌÀà
 	 */
 	private class RadarSweep implements Runnable {
 		int i = 1;
@@ -267,11 +267,11 @@ public class ImageRadarView extends View {
 
 			while (!Thread.currentThread().isInterrupted() && i == 1) {
 				try {
-					ImageRadarView.this.postInvalidate();// åˆ·æ–°radarView,
-															// æ‰§è¡ŒonDraw();
-					Thread.sleep(10);// æš‚åœå½“å‰çº¿ç¨‹ï¼Œæ›´æ–°UIçº¿ç¨‹
+					ImageRadarView.this.postInvalidate();// Ë¢ĞÂradarView,
+															// Ö´ĞĞonDraw();
+					Thread.sleep(10);// ÔİÍ£µ±Ç°Ïß³Ì£¬¸üĞÂUIÏß³Ì
 				} catch (InterruptedException e) {
-					i = 0;// ç»“æŸå½“å‰æ‰«æçº¿ç¨‹æ ‡å¿—ç¬¦
+					i = 0;// ½áÊøµ±Ç°É¨ÃèÏß³Ì±êÖ¾·û
 					break;
 				}
 			}

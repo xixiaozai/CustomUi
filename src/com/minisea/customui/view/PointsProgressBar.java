@@ -1,6 +1,6 @@
 package com.minisea.customui.view;
 
-import com.minisea.customui.R;
+import com.minisea.cookbook.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -53,7 +53,7 @@ public class PointsProgressBar extends View {
 				R.drawable.radar_back) : selectDrawable;
 		selectBm = ((BitmapDrawable) selectDrawable).getBitmap();
 		Matrix matrix = new Matrix(); 
-		matrix.postScale(1.5f,1.5f); //é•¿å’Œå®½æ”¾å¤§ç¼©å°çš„æ¯”ä¾‹
+		matrix.postScale(1.5f,1.5f); //³¤ºÍ¿í·Å´óËõĞ¡µÄ±ÈÀı
 		selectBm = Bitmap.createBitmap(selectBm,0,0,selectBm.getWidth(),selectBm.getHeight(),matrix,true);
 		
 		Drawable unselectDrawable = typeArray
@@ -65,12 +65,12 @@ public class PointsProgressBar extends View {
 		pointsCount = typeArray.getInt(R.styleable.points_p_bar_point_count, 5);
 		typeArray.recycle();
 		
-		//å®šæ—¶æ›´æ–°é€‰ä¸­ç‚¹ä½ç½®
+		//¶¨Ê±¸üĞÂÑ¡ÖĞµãÎ»ÖÃ
 		
 	}
 
 	/**
-	 * å®šæ—¶æ”¹å˜é€‰æ‹©çš„ç‚¹
+	 * ¶¨Ê±¸Ä±äÑ¡ÔñµÄµã
 	 * @author haihai.zhang
 	 *
 	 */
@@ -86,7 +86,7 @@ public class PointsProgressBar extends View {
 				}
 				try {
 					PointsProgressBar.this.postInvalidate();
-					Thread.sleep(300);
+					Thread.sleep(150);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -104,13 +104,10 @@ public class PointsProgressBar extends View {
 		int height = getMeasuredHeight();
   		paint.setColor(Color.YELLOW);
 		canvas.save();
-		canvas.drawCircle(10, 10, 20, paint);
-		Log.i("CustomUI","--------------åŒºåŸŸï¼š" + getTop() + " " + getBottom() + " " + getLeft() + " " + getRight());
 		int divider = width / pointsCount;
 		for (int i =0; i < pointsCount; i++ ) {
 			if(currentSelectIndex == i){
-				
-				canvas.drawBitmap(selectBm, i * divider + divider / 2 , unselectBm.getWidth() / 2, new Paint());
+				canvas.drawBitmap(selectBm, i * divider + divider / 2 ,  selectBm.getWidth() / 2 - unselectBm.getWidth() / 2 , new Paint());
 			}else{
 				canvas.drawBitmap(unselectBm, i * divider + divider / 2, unselectBm.getWidth() / 2, new Paint());
 			}
@@ -122,9 +119,9 @@ public class PointsProgressBar extends View {
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		//è·å–å®½åº¦
+		//»ñÈ¡¿í¶È
 		int width = 720;
-		//è®¾ç½®é«˜åº¦ä¸ºç‚¹å¤§å°
+		//ÉèÖÃ¸ß¶ÈÎªµã´óĞ¡
 		int height =  selectBm.getHeight();
 		PointsProgressBar.this.postInvalidate();
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -136,8 +133,8 @@ public class PointsProgressBar extends View {
 	}
 	
 	public void start() {
-		this.setVisibility(View.VISIBLE);// è®¾ç½®å¯è§
-		pbThread = new Thread(timer);// é›·è¾¾æ‰«æçº¿ç¨‹
+		this.setVisibility(View.VISIBLE);// ÉèÖÃ¿É¼û
+		pbThread = new Thread(timer);// À×´ïÉ¨ÃèÏß³Ì
 		pbThread.start();
 	}
 }

@@ -1,6 +1,6 @@
 package com.minisea.customui.view;
 
-import com.minisea.customui.R;
+import com.minisea.cookbook.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -25,7 +25,7 @@ public class CombinationlStatusView extends LinearLayout{
 	public final static String TYPE_TextView = "text";
 	
 	public CheckBox checkbox = null;
-	public ProgressBar progressBar = null;
+	public MovingProgressBar progressBar = null;
 	public CheckedTextView checkedTextView = null;
 	public TextView textView = null;
 	
@@ -42,36 +42,36 @@ public class CombinationlStatusView extends LinearLayout{
 	}
 	
 	private void obtainViews(Context context) {
-		// å¯¼å…¥å¸ƒå±€  
+		// µ¼Èë²¼¾Ö  
         LayoutInflater mInflater = LayoutInflater.from(context);  
         LinearLayout view = (LinearLayout) mInflater.inflate(R.layout.custom_view_backup_status, this, true);  
        
         checkbox = (CheckBox) view.findViewById(R.id.checkbox);
-        progressBar = (ProgressBar) view.findViewById(R.id.progress_bar);
+        progressBar = (MovingProgressBar) view.findViewById(R.id.progress_bar);
         checkedTextView = (CheckedTextView) view.findViewById(R.id.checked_textview);
         textView = (TextView) view.findViewById(R.id.textview);
 	}
 
 	/**
-	 * åˆå§‹åŒ–æ§ä»¶çŠ¶æ€
+	 * ³õÊ¼»¯¿Ø¼ş×´Ì¬
 	 * @param context
 	 * @param attr
 	 */
 	private void initViewStatus(Context context, AttributeSet attr ){
-		TypedArray typeArray = context.obtainStyledAttributes(attr, R.styleable.callback_status_view);  
-        //è·å–æ˜¾ç¤ºçš„æ§ä»¶ç±»å‹
-        String type = typeArray.getString(R.styleable.callback_status_view_type);  
-        //è·å–checkboxçŠ¶æ€
-        boolean checkState = typeArray.getBoolean(R.styleable.callback_status_view_check_state, true); 
-        //è·å–è¿›åº¦
-        int progress = typeArray.getInteger(R.styleable.callback_status_view_progress, 0);
-        //è·å–checkedTextViewæ˜¾ç¤ºçš„å†…å®¹
-        String checkedText = typeArray.getString(R.styleable.callback_status_view_checkedtext); 
+		TypedArray typeArray = context.obtainStyledAttributes(attr, R.styleable.combinationl_status_view);  
+        //»ñÈ¡ÏÔÊ¾µÄ¿Ø¼şÀàĞÍ
+        String type = typeArray.getString(R.styleable.combinationl_status_view_type);  
+        //»ñÈ¡checkbox×´Ì¬
+        boolean checkState = typeArray.getBoolean(R.styleable.combinationl_status_view_check_state, true); 
+        //»ñÈ¡½ø¶È
+        int progress = typeArray.getInteger(R.styleable.combinationl_status_view_progress, 0);
+        //»ñÈ¡checkedTextViewÏÔÊ¾µÄÄÚÈİ
+        String checkedText = typeArray.getString(R.styleable.combinationl_status_view_checkedtext); 
         
-        //è·å–TextViewæ˜¾ç¤ºçš„å†…å®¹
-        String text = typeArray.getString(R.styleable.callback_status_view_text); 
+        //»ñÈ¡TextViewÏÔÊ¾µÄÄÚÈİ
+        String text = typeArray.getString(R.styleable.combinationl_status_view_text); 
         
-        //ç¼“å­˜å±æ€§,å¯ä»¥ä¸è®¾ç½®ï¼Œä¸»è¦æ˜¯ä¸ºäº†æé«˜æ•ˆç‡  
+        //»º´æÊôĞÔ,¿ÉÒÔ²»ÉèÖÃ£¬Ö÷ÒªÊÇÎªÁËÌá¸ßĞ§ÂÊ  
         typeArray.recycle();  
         
         show(type);
@@ -90,7 +90,7 @@ public class CombinationlStatusView extends LinearLayout{
 	}
 
 	/**
-	 * è®¾ç½®CheckboxçŠ¶æ€
+	 * ÉèÖÃCheckbox×´Ì¬
 	 * @param state
 	 */
 	public void setCheckStated(boolean state){
@@ -98,7 +98,7 @@ public class CombinationlStatusView extends LinearLayout{
 	}
 	
 	/**
-	 * è®¾ç½®è¿›åº¦
+	 * ÉèÖÃ½ø¶È
 	 * @param progress
 	 */
 	public void setProgress(int progress){
@@ -106,7 +106,7 @@ public class CombinationlStatusView extends LinearLayout{
 	}
 	
 	/**
-	 * è®¾ç½®checkedTextView å†…å®¹
+	 * ÉèÖÃcheckedTextView ÄÚÈİ
 	 * @param text
 	 */
 	public void setCheckedText(String text){
@@ -114,7 +114,7 @@ public class CombinationlStatusView extends LinearLayout{
 	}
 	
 	/**
-	 * è®¾ç½®TextViewå†…å®¹
+	 * ÉèÖÃTextViewÄÚÈİ
 	 * @param text
 	 */
 	public void setText(String text){
@@ -122,11 +122,11 @@ public class CombinationlStatusView extends LinearLayout{
 	}
 	
 	/**
-	 * æ ¹æ®ç»™å®šçš„ç±»å‹æ˜¾ç¤ºæŒ‡å®šçš„æ§ä»¶
+	 * ¸ù¾İ¸ø¶¨µÄÀàĞÍÏÔÊ¾Ö¸¶¨µÄ¿Ø¼ş
 	 * @param type
 	 */
 	public void show(String type) {
-		//é¦–å…ˆéšè—æ‰€æœ‰æ§ä»¶
+		//Ê×ÏÈÒş²ØËùÓĞ¿Ø¼ş
 		hideBesides(type);
 		
 		if(type.equals(TYPE_CheckBox)) 

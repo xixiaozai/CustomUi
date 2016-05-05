@@ -1,6 +1,6 @@
 package com.minisea.customui.view;
 
-import com.minisea.customui.R;
+import com.minisea.cookbook.R;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
@@ -39,16 +39,16 @@ public class WindowsCopyResStyleProgress extends ProgressBar{
 	@Override
 	protected synchronized void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
-		//è·å–æ§ä»¶å®½åº¦
+		//»ñÈ¡¿Ø¼ş¿í¶È
 		sw = getWidth();
-		//ç»˜åˆ¶äº®å…‰
+		//»æÖÆÁÁ¹â
 		LinearGradient lg=new LinearGradient(0, 0, 50,50,Color.argb(0, 255, 255, 255),Color.argb(80, 255, 255, 154),TileMode.CLAMP); 
 		mPaint.setShader(lg);
 		mPaint.setAntiAlias(true);  
 		canvas.save();
-		Log.i("CustomUI", "æ„é€ å®Œæˆ å®½åº¦ï¼š" + sw + " é«˜åº¦ï¼š" + sh);
+		Log.i("CustomUI", "¹¹ÔìÍê³É ¿í¶È£º" + sw + " ¸ß¶È£º" + sh);
 		
-		//æ ¹æ®å½“å‰è¿›åº¦è®¾ç½®äº®å…‰ç§»åŠ¨èŒƒå›´
+		//¸ù¾İµ±Ç°½ø¶ÈÉèÖÃÁÁ¹âÒÆ¶¯·¶Î§
 		w = (int) ((float)getProgress() / 100f * sw);
 		if(r <= w - 20){
 			l = l + 20;

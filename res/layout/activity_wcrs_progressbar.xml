@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:myattr="http://schemas.android.com/apk/res-auto"
-    xmlns:points_p_bar="http://schemas.android.com/apk/res/com.minisea.customui"
+    xmlns:points_p_bar="http://schemas.android.com/apk/res/com.minisea.cookbook"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff">
@@ -24,6 +24,7 @@
 	
 	 <com.minisea.customui.view.PointsProgressBar
                     android:id="@+id/points_p_b"
+                    android:layout_below="@id/moving_progress_bar"
                     android:layout_width="500dp"
                     android:layout_height="500dp"
                     android:visibility="visible"

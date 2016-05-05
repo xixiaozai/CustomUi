@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:myattr="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal" >
 
     <CheckBox
@@ -11,14 +12,22 @@
         android:visibility="gone"
         android:layout_gravity="center_vertical"/>
 
-	<ProgressBar
+	<!-- <ProgressBar
 	    android:id="@+id/progress_bar"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:visibility="gone"
 	    android:layout_gravity="center_vertical"
-	    style="?android:attr/progressBarStyleSmall" />
+	    style="?android:attr/progressBarStyleSmall" /> -->
 
+	<com.minisea.customui.view.MovingProgressBar 
+	    android:id="@+id/progress_bar"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone"
+	    android:layout_gravity="center_vertical"
+        myattr:movingProgressColor="@color/backup_prog"
+        myattr:secondProg="@drawable/backup_prog"/>
 	<CheckedTextView
 	    android:id="@+id/checked_textview"
 	    android:layout_width="wrap_content"

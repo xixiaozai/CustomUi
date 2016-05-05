@@ -1,6 +1,6 @@
 package com.minisea.customui.view;
 
-import com.minisea.customui.R;
+import com.minisea.cookbook.R;
 
 import android.content.Context;
 import android.graphics.Canvas;

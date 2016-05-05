@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Windows拷贝文件效果进度条"
+        android:text="显示类似Windows拷贝文件效果进度条"
         android:textSize="12sp"
         />
 	
@@ -36,14 +36,14 @@
 	    android:id="@+id/water_wave_progress"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:text="水波纹进度"
+	    android:text="显示水波纹进度"
 	    ></Button>
 	   
 	<Button 
 	    android:id="@+id/rotating"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:text="图片旋转"
+	    android:text="显示图片旋转"
 	    ></Button>
 	    
     

@@ -11,10 +11,10 @@ import android.graphics.PathEffect;
 import android.view.View;
 
 /**
- * æ°´æ³¢çº¹åŠ¨ç”»<br>
- * ç±»è¯¦ç»†è¯´æ˜.
+ * Ë®²¨ÎÆ¶¯»­<br>
+ * ÀàÏêÏ¸ËµÃ÷.
  * <p>
- * Copyright: Copyright (c) 2015-2-2 ä¸Šåˆ10:01:05
+ * Copyright: Copyright (c) 2015-2-2 ÉÏÎç10:01:05
  * <p>
  * 
  * @author linxf@c-platform.com
@@ -23,7 +23,7 @@ import android.view.View;
 public class WaterProgress extends View {
 
 	/**
-	 * ç»˜å›¾å·¥å…·
+	 * »æÍ¼¹¤¾ß
 	 */
 	private Paint paint;
 
@@ -32,19 +32,19 @@ public class WaterProgress extends View {
 	private Paint bgPaint = new Paint();
 
 	/**
-	 * è·¯å¾„
+	 * Â·¾¶
 	 */
 	private Path path = new Path();
 
 	private PathEffect effect;
 
 	/**
-	 * åç§»é‡
+	 * Æ«ÒÆÁ¿
 	 */
 	private double theta;
 
 	/**
-	 * (é¢‘ç‡)æ§åˆ¶é€Ÿåº¦
+	 * (ÆµÂÊ)¿ØÖÆËÙ¶È
 	 */
 	private float delay;
 
@@ -53,64 +53,64 @@ public class WaterProgress extends View {
 	private float angle;
 
 	/**
-	 * å±å¹•å®½åº¦
+	 * ÆÁÄ»¿í¶È
 	 */
 	private int screenWidth;
 
 	/**
-	 * å±å¹•é«˜åº¦
+	 * ÆÁÄ»¸ß¶È
 	 */
 	private int screenHeight;
 
 	/**
-	 * è¿›åº¦æ¡èƒŒæ™¯å®½åº¦
+	 * ½ø¶ÈÌõ±³¾°¿í¶È
 	 */
 	private int mWidth;
 
 	/**
-	 * è¿›åº¦æ¡èƒŒæ™¯é«˜åº¦
+	 * ½ø¶ÈÌõ±³¾°¸ß¶È
 	 */
 	private int mHeight;
 
 	/**
-	 * è¿›åº¦æ¡å…¶å®ä½ç½®
+	 * ½ø¶ÈÌõÆäÊµÎ»ÖÃ
 	 */
 	private int mStartX;
 
 	/**
-	 * è¿›åº¦æ¡èƒŒæ™¯çš„èµ·å§‹å€¼(é»˜è®¤åœ¨800åˆ†è¾¨ç‡ä¸‹)
+	 * ½ø¶ÈÌõ±³¾°µÄÆğÊ¼Öµ(Ä¬ÈÏÔÚ800·Ö±æÂÊÏÂ)
 	 */
 	private float mStart = 6;
 
 	/**
-	 * è¿›åº¦æ¡èƒŒæ™¯çš„ç»“æŸå€¼(é»˜è®¤åœ¨800åˆ†è¾¨ç‡ä¸‹)
+	 * ½ø¶ÈÌõ±³¾°µÄ½áÊøÖµ(Ä¬ÈÏÔÚ800·Ö±æÂÊÏÂ)
 	 */
 	private float mEnd = 304;
 
 	/**
-	 * mé—´è·
+	 * m¼ä¾à
 	 */
 	private float mDistance;
 
 	private int color;
 
 	/**
-	 * å·²ç”¨æ–‡å­—æç¤º
+	 * ÒÑÓÃÎÄ×ÖÌáÊ¾
 	 */
 	// private String textRemain;
 
 	/**
-	 * æ˜¯å¦éœ€è¦åˆ·æ–°
+	 * ÊÇ·ñĞèÒªË¢ĞÂ
 	 */
 	private boolean isFresh = false;
 
 	/**
-	 * è¿›åº¦æ¡é«˜åº¦æ€»é«˜åº¦
+	 * ½ø¶ÈÌõ¸ß¶È×Ü¸ß¶È
 	 */
 	private int progressHeight;
 
 	/**
-	 * è¿›åº¦æ¡é«˜åº¦
+	 * ½ø¶ÈÌõ¸ß¶È
 	 */
 	private float height;
 
@@ -121,17 +121,17 @@ public class WaterProgress extends View {
 	/**
 	 * @param context
 	 * @param bitmap
-	 *            èƒŒæ™¯å›¾ç‰‡
+	 *            ±³¾°Í¼Æ¬
 	 * @param screenwidth
-	 *            å±å¹•å®½åº¦
+	 *            ÆÁÄ»¿í¶È
 	 * @param screenHeight
-	 *            å±å¹•é«˜åº¦
+	 *            ÆÁÄ»¸ß¶È
 	 * @param mWidth
-	 *            èƒŒæ™¯å®½åº¦
+	 *            ±³¾°¿í¶È
 	 * @param mHeight
-	 *            èƒŒæ™¯é«˜åº¦
+	 *            ±³¾°¸ß¶È
 	 * @param angle
-	 *            åŠ è½½è¿›åº¦
+	 *            ¼ÓÔØ½ø¶È
 	 */
 	public WaterProgress(Context context, Bitmap bitmap, int screenwidth, int screenHeight, int mWidth, int mHeight, float angle) {
 		super(context);
@@ -181,7 +181,7 @@ public class WaterProgress extends View {
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
-		// åˆ›å»ºã€å¹¶åˆå§‹åŒ–Path
+		// ´´½¨¡¢²¢³õÊ¼»¯Path
 		path.reset();
 		if (height <= progressHeight) {
 			path.moveTo(mStartX, (int) (mStart + mDistance * angle));
@@ -191,7 +191,7 @@ public class WaterProgress extends View {
 			height--;
 		}
 
-		// å¦‚æœå·²ç”¨ä¸º0
+		// Èç¹ûÒÑÓÃÎª0
 		if (angle == 0) {
 			isFresh = true;
 			path.lineTo(mStartX + mWidth, mStart + height);
@@ -214,7 +214,7 @@ public class WaterProgress extends View {
 			path.lineTo(mStartX, mEnd);
 			path.lineTo(mStartX, mStart + height);
 			canvas.drawPath(path, mPaint);
-			// canvas.translate(0, 60);//å‘ä¸‹å¹³ç§»
+			// canvas.translate(0, 60);//ÏòÏÂÆ½ÒÆ
 			delay += 0.05;
 		}
 		canvas.drawBitmap(bitmap, mStartX, 0, bgPaint);

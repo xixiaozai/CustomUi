@@ -1,6 +1,6 @@
 package com.minisea.customui.ui;
 
-import com.minisea.customui.R;
+import com.minisea.cookbook.R;
 import com.minisea.customui.view.ImageRadarView;
 import com.minisea.customui.view.RadarView;
 
@@ -38,20 +38,20 @@ public class RadarActivity extends Activity{
                 // TODO Auto-generated method stub  
                 if (startRadar) {  
                     btn.setText("end");  
-                    radarView.setVisibility(View.VISIBLE);// è®¾ç½®å¯è§  
+                    radarView.setVisibility(View.VISIBLE);// ÉèÖÃ¿É¼û  
                     Animation radarAnimEnter = AnimationUtils.loadAnimation(  
-                    		RadarActivity.this, R.anim.radar_anim_enter);// åˆå§‹åŒ–radarViewè¿›å…¥åŠ¨ç”»  
-                    radarView.startAnimation(radarAnimEnter);// å¼€å§‹è¿›å…¥åŠ¨ç”»  
-                    radarSweepThread = new Thread(new RadarSweep());// é›·è¾¾æ‰«æçº¿ç¨‹  
+                    		RadarActivity.this, R.anim.radar_anim_enter);// ³õÊ¼»¯radarView½øÈë¶¯»­  
+                    radarView.startAnimation(radarAnimEnter);// ¿ªÊ¼½øÈë¶¯»­  
+                    radarSweepThread = new Thread(new RadarSweep());// À×´ïÉ¨ÃèÏß³Ì  
                     radarSweepThread.start();  
                     startRadar = false;  
                 } else {  
                     btn.setText("start");  
                     Animation radarAnimEnter = AnimationUtils.loadAnimation(  
-                    		RadarActivity.this, R.anim.radar_anim_exit);// åˆå§‹åŒ–radarViewé€€å‡ºåŠ¨ç”»  
-                    radarView.startAnimation(radarAnimEnter);// å¼€å§‹è¿›å…¥åŠ¨ç”»  
-                    radarView.setVisibility(View.INVISIBLE);// è®¾ç½®ä¸å¯è§  
-                    radarSweepThread.interrupt();// åœæ­¢æ‰«ææ›´æ–°  
+                    		RadarActivity.this, R.anim.radar_anim_exit);// ³õÊ¼»¯radarViewÍË³ö¶¯»­  
+                    radarView.startAnimation(radarAnimEnter);// ¿ªÊ¼½øÈë¶¯»­  
+                    radarView.setVisibility(View.INVISIBLE);// ÉèÖÃ²»¿É¼û  
+                    radarSweepThread.interrupt();// Í£Ö¹É¨Ãè¸üĞÂ  
                     startRadar = true;  
                 }  
             }  
@@ -60,7 +60,7 @@ public class RadarActivity extends Activity{
   
     /** 
      * @ClassName RadarSweep 
-     * @Description é›·è¾¾æ‰«æåŠ¨ç”»åˆ·æ–°çº¿ç¨‹ç±» 
+     * @Description À×´ïÉ¨Ãè¶¯»­Ë¢ĞÂÏß³ÌÀà 
      */  
     private class RadarSweep implements Runnable {  
         int i = 1;  
@@ -71,10 +71,10 @@ public class RadarActivity extends Activity{
   
             while (!Thread.currentThread().isInterrupted() && i == 1) {  
                 try {  
-                    radarView.postInvalidate();// åˆ·æ–°radarView, æ‰§è¡ŒonDraw();  
-                    Thread.sleep(10);// æš‚åœå½“å‰çº¿ç¨‹ï¼Œæ›´æ–°UIçº¿ç¨‹  
+                    radarView.postInvalidate();// Ë¢ĞÂradarView, Ö´ĞĞonDraw();  
+                    Thread.sleep(10);// ÔİÍ£µ±Ç°Ïß³Ì£¬¸üĞÂUIÏß³Ì  
                 } catch (InterruptedException e) {  
-                    i = 0;// ç»“æŸå½“å‰æ‰«æçº¿ç¨‹æ ‡å¿—ç¬¦  
+                    i = 0;// ½áÊøµ±Ç°É¨ÃèÏß³Ì±êÖ¾·û  
                     break;  
                 }  
             }  

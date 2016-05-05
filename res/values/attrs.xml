@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="callback_status_view">
+    <declare-styleable name="combinationl_status_view">
         <attr name="type" format="string" />
         <attr name="check_state" format="boolean" />
         <attr name="progress" format="integer" />

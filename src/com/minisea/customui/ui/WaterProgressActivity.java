@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.SeekBar;
 
-import com.minisea.customui.R;
+import com.minisea.cookbook.R;
 import com.minisea.customui.view.WaveView;
 
 /**

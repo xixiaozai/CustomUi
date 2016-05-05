@@ -2,14 +2,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:myattr="http://schemas.android.com/apk/res-auto"
+    xmlns:combinationl_status_view="http://schemas.android.com/apk/res/com.minisea.cookbook"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" >
 
     <com.minisea.customui.view.CombinationlStatusView
         android:id="@+id/check"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="30dp"
         android:gravity="center|right"
+        combinationl_status_view:type="@string/callback_status_view_type_checkbox"
+        combinationl_status_view:check_state="true"
+        combinationl_status_view:progress="0"
+        combinationl_status_view:checkedtext="等待中"
+        combinationl_status_view:text="完成"
         />
     
 

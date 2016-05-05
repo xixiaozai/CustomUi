@@ -1,6 +1,6 @@
 package com.minisea.customui.ui;
 
-import com.minisea.customui.R;
+import com.minisea.cookbook.R;
 import com.minisea.customui.view.MovingProgressBar;
 import com.minisea.customui.view.PointsProgressBar;
 import com.minisea.customui.view.WindowsCopyResStyleProgress;

@@ -1,6 +1,6 @@
 package com.minisea.customui.view;
 
-import com.minisea.customui.R;
+import com.minisea.cookbook.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -112,12 +112,15 @@ public class MovingProgressBar extends View {
         // get
         // Rect rect = new Rect();
         // this.mPaint.getTextBounds(this.str, 0, this.str.length(), rect);
-        // int x = (getWidth() / 2) - rect.centerX();// 璁╃幇瀹炵殑瀛椾綋澶勪簬涓績浣嶇疆;;
-        // int y = (getHeight() / 2) - rect.centerY();// 璁╂樉绀虹殑瀛椾綋澶勪簬涓績浣嶇疆;;
+        // int x = (getWidth() / 2) - rect.centerX();// 让现实的字体处于中心位置;;
+        // int y = (getHeight() / 2) - rect.centerY();// 让显示的字体处于中心位置;;
         // canvas.drawText(this.str, x, y, this.mPaint);
 
     }
 
+    public int getProgress(){
+    	return progress;
+    }
     Runnable runSecondaryProgress = new Runnable() {
         @Override
         public void run() {
